@@ -7,124 +7,124 @@
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
+        "firecrackers": {
+            "id": 1,
+            "type": 0,
+            "name": "Firecrackers",
+            "description": "Multi-colored sparklers that are safe for any age."
+        }
+    },{
+        "smoke_bombs": {
             "id": 2,
             "type": 0,
-            "name": "Fairy Sparklers",
+            "name": "Smoke Bombs",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
+        "fountains": {
             "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
+            "type": 1,
+            "name": "Fountains",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "ground_spinners": {
+            "id": 4,
+            "type": 1,
+            "name": "Ground Spinners",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 2,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "poppers": {
+            "id": 5,
+            "type": 1,
+            "name": "Poppers",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "roman_candles": {
+            "id": 6,
+            "type": 2,
+            "name": "Roman Candles",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "bottle-rockets": {
+            "id": 7,
+            "type": 2,
+            "name": "Bottle Rockets",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 2,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "mortars": {
+            "id": 8,
+            "type": 2,
+            "name": "Mortars",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "single-shot": {
+            "id": 9,
+            "type": 3,
+            "name": "Single Shot Tubes",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "rockets": {
+            "id": 10,
+            "type": 3,
+            "name": "rockets",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 2,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "mines": {
+            "id": 11,
+            "type": 3,
+            "name": "mines",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "aerial-stars": {
+            "id": 12,
+            "type": 4,
+            "name": "Aerial Star Shells",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "combo-cakes": {
+            "id": 13,
+            "type": 4,
+            "name": "Combination Cakes",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 2,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "snakes": {
+            "id": 14,
+            "type": 4,
+            "name": "Snakes",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "water-bombs": {
+            "id": 15,
+            "type": 5,
+            "name": "Water Bombs",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 0,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "bouquet-pattern": {
+            "id": 16,
+            "type": 5,
+            "name": "Bouquet Pattern",
             "description": "Multi-colored sparklers that are safe for any age."
         }
     },{
-        "fairy_sparklers": {
-            "id": 2,
-            "type": 0,
-            "name": "Fairy Sparklers",
+        "dahlia": {
+            "id": 17,
+            "type": 5,
+            "name": "Dahlia",
             "description": "Multi-colored sparklers that are safe for any age."
         }
-    },{
-        "fairy_sparklers": {
-            "id": 3,
-            "type": 0,
-            "name": "Fairy Sparklers",
-            "description": "Multi-colored sparklers that are safe for any age."
-        }
-    },
+    }
 	]
 }
