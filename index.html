@@ -6,7 +6,28 @@
 	<link rel="stylesheet" type="text/css" href="./styles/main.css">
 </head>
 <body>
-	<h1>ACME Explosives</h1>
+	<nav class="navbar navbar-default navbar-inverse">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <a class="navbar-brand">ACME Explosives</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="dropdown">
+	          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose your category <span class="caret"></span></a>
+	          <ul class="dropdown-menu">
+	            <li><a id="Fireworks">Fireworks</a></li>
+	            <li><a id="Demolition">Demolition</a></li>
+	          </ul>
+	        </li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<div id="products"></div>
 
 	<script type="text/javascript" src="./lib/bower_components/jquery/dist/jquery.js"></script>
 	<script type="text/javascript" src="./lib/bower_components/bootstrap/dist/js/bootstrap.js"></script>
