@@ -1,46 +1,59 @@
-var categoryTypeName = [];
+//**********************
+//EVENT LISTENER TO FIRE OFF IMPORT AND PRINT FUNCTIONS
+//**********************
 $(".dropdown-menu").click(function(e){
-	$("#products").html("");
+	$("#products").html(""); // RESET PRODUCTS DIV
 	var storeArray = [];
-	var clickTarget =  e.target.id;
-	
-	function writeToDOM(){
-		var categoryId = "";
-		var categoryName = "";
-		var categoryTypeId = [];
-		
-		var idCounter = 0;
-		
-		
-			for (let x = 0; x < storeArray.length; x++){
-				if (storeArray[x].value === "categories" && storeArray[x].name === clickTarget){
-					categoryId = storeArray[x].id;
-					categoryName = storeArray[x].name;
-				}
-				if (storeArray[x].value === "types" && categoryId === storeArray[x].category) {
-					var typeId = storeArray[x].id;
-					categoryTypeId.push(typeId);
-					categoryTypeName.push(storeArray[x].name);
-					console.log(categoryTypeName);
-				}
-			}
-			for (let y = 0; y < storeArray.length; y++) {
-				var newType = categoryTypeName[storeArray[y].type];
-				if (storeArray[y].value === "products" && storeArray[y].type === categoryTypeId[idCounter]) {
-					if (y % 3 === 1) {
-						idCounter++;
-					}
-					
-					$("#products").append(`<div class="productCard col-md-4">
-											<h3>${storeArray[y].name}</h3>
-											<p>${storeArray[y].description}</p>
-											<p id="category">Category: ${categoryName}</p>
-											<p class="type">${newType}</p>
+
+//************************************************
+//VARIABLES FOR LOGIC
+//************************************************
+var clickTarget =  e.target.id; //Listens for the id of what's chosen by user
+var chosenCategoryId = "";
+var chosenCategoryName = "";
+var typeArray = [];
+var productsArray = [];
+var chosenProductsArray = [];
+
+//WRITE TO DOM FUNCTIONALITY
+function writeToDOM(){
+	for (var x = 0; x < chosenProductsArray.length; x++){
+		$("#products").append(`<div class="productCard col-md-4">
+											<h3>${chosenProductsArray[x].name}</h3>
+											<p>${chosenProductsArray[x].description}</p>
+											<p id="category">Category: ${chosenCategoryName}</p>
+											<p class="type">${chosenProductsArray[x].type}</p>
 											</div>`);
-				}
-			}		
-	}
+		}
 	
+}
+
+//SPLIT OBJECTS INTO RESPECTIVE ARRAYS FOR WRITING TO DOM
+function seperateItems(fullArray){
+	for (var a = 0; a < fullArray.length; a++) {
+		if (fullArray[a].value === "categories" && fullArray[a].name === clickTarget) {
+			chosenCategoryId = fullArray[a].id;
+			chosenCategoryName = fullArray[a].name;
+		}
+		if (fullArray[a].value === "types" && chosenCategoryId === fullArray[a].category){
+			typeArray.push(fullArray[a]);
+		}
+		if (fullArray[a].value === "products"){
+			productsArray.push(fullArray[a]);
+		}
+	}
+	for (var b = 0; b < productsArray.length; b++){
+		for(var c = 0; c < typeArray.length; c++){
+			if (productsArray[b].type === typeArray[c].id) {
+				productsArray[b].type = typeArray[c].name;
+				chosenProductsArray.push(productsArray[b]);
+			}
+		}
+	}
+	writeToDOM();
+}
+
+//LOADING JSON FILES - PROMISE STRUCTURE	
 	var loadCategoriesJSON = function(){
 		return new Promise(function(resolve, reject){
 			$.ajax("./db/categories.json").done(function(data1){
@@ -91,7 +104,7 @@ $(".dropdown-menu").click(function(e){
 				}
 			}
 		});
-		writeToDOM();
+		seperateItems(storeArray);
 
 	});
 
